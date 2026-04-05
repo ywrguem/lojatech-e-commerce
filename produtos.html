@@ -17,7 +17,8 @@
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
           <li><a class="active" href="produtos.html">Produtos</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="carrinho.html">Carrinho <span id="cart-count" class="cart-count">0</span></a></li>
+          <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
     </div>
@@ -25,45 +26,60 @@
 
   <main>
 
-    <section class="products-section">
+    <section class="products-section" aria-label="Lista de produtos">
       <div class="container">
-        <h2 class="section-title">Produtos em Destaque</h2>
+        <h2 class="section-title">Nossos Produtos</h2>
 
         <div class="products-grid">
 
           <article class="product-card">
             <img src="images/produto1.jpg" alt="Notebook prata moderno aberto" class="product-image">
-
             <div class="product-info">
               <h3>Notebook Pro X</h3>
-              <p>Notebook ideal para estudos, trabalho e produtividade com ótimo desempenho.</p>
+              <p>Notebook ideal para produtividade, estudos e trabalho.</p>
               <p class="price">R$ 3.499,90</p>
 
-              <button class="btn-buy" type="button">Comprar Agora</button>
+              <button class="btn-buy add-cart"
+                data-id="1"
+                data-nome="Notebook Pro X"
+                data-preco="3499.90"
+                data-imagem="images/produto1.jpg">
+                Adicionar ao Carrinho
+              </button>
             </div>
           </article>
 
           <article class="product-card">
             <img src="images/produto2.webp" alt="Smartwatch moderno com pulseira preta" class="product-image">
-
             <div class="product-info">
               <h3>Smartwatch Fit</h3>
-              <p>Controle sua saúde, passos e notificações com um design moderno e confortável.</p>
+              <p>Controle sua saúde, notificações e passos com estilo.</p>
               <p class="price">R$ 299,90</p>
 
-              <button class="btn-buy" type="button">Comprar Agora</button>
+              <button class="btn-buy add-cart"
+                data-id="2"
+                data-nome="Smartwatch Fit"
+                data-preco="299.90"
+                data-imagem="images/produto2.webp">
+                Adicionar ao Carrinho
+              </button>
             </div>
           </article>
 
           <article class="product-card">
             <img src="images/produto3.webp" alt="Fone bluetooth JBL preto com estojo de carregamento" class="product-image">
-
             <div class="product-info">
               <h3>Fone Bluetooth JBL</h3>
-              <p>Fone sem fio com excelente qualidade sonora e bateria de longa duração.</p>
+              <p>Som potente, sem fios e bateria de longa duração.</p>
               <p class="price">R$ 189,90</p>
 
-              <button class="btn-buy" type="button">Comprar Agora</button>
+              <button class="btn-buy add-cart"
+                data-id="3"
+                data-nome="Fone Bluetooth JBL"
+                data-preco="189.90"
+                data-imagem="images/produto3.webp">
+                Adicionar ao Carrinho
+              </button>
             </div>
           </article>
 
@@ -75,12 +91,11 @@
 
   <footer class="footer">
     <div class="container footer-content">
-      <p> 2026 LojaTech - Todos os direitos reservados.</p>
-      <p>Email: contato@lojatech.com | Telefone: (65) 98103-8426 </p>
+      <p>© 2026 LojaTech - Todos os direitos reservados.</p>
+      <p>Email: contato@lojatech.com | Telefone: (65) 99999-9999</p>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
-
 </body>
 </html>
