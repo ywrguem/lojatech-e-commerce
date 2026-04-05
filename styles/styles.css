@@ -17,7 +17,6 @@ body {
   margin: 0 auto;
 }
 
-/* HEADER */
 .header {
   background-color: #0f172a;
   padding: 18px 0;
@@ -33,7 +32,6 @@ body {
   align-items: center;
 }
 
-/* LOGO */
 .logo {
   color: white;
   font-size: 30px;
@@ -44,7 +42,6 @@ body {
   color: #e11d48;
 }
 
-/* MENU */
 .menu {
   list-style: none;
   display: flex;
@@ -81,7 +78,6 @@ body {
   font-size: 13px;
 }
 
-/* HERO */
 .hero {
   background: linear-gradient(90deg, #0f172a, #1e293b);
   padding: 90px 0;
@@ -100,7 +96,6 @@ body {
   opacity: 0.9;
 }
 
-/* BOTÕES */
 .btn-primary {
   background-color: #e11d48;
   color: white;
@@ -138,7 +133,6 @@ body {
   background-color: #e11d48;
 }
 
-/* TITULOS */
 .section-title {
   text-align: center;
   font-size: 30px;
@@ -156,7 +150,6 @@ body {
   border-radius: 10px;
 }
 
-/* HIGHLIGHTS */
 .highlights {
   padding: 60px 0;
 }
@@ -180,7 +173,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* PRODUTOS */
 .products-section {
   padding: 60px 0;
 }

@@ -1,6 +1,3 @@
-// ============================
-// LojaTech - Carrinho Completo
-// ============================
 
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
@@ -23,46 +20,6 @@ function updateCartCount() {
     el.textContent = totalItems;
   });
 }
-
-// ============================
-// Adicionar ao Carrinho
-// ============================
-
-const addButtons = document.querySelectorAll(".add-cart");
-
-addButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const id = button.dataset.id;
-    const nome = button.dataset.nome;
-    const preco = parseFloat(button.dataset.preco);
-    const imagem = button.dataset.imagem;
-
-    const cart = getCart();
-
-    const produtoExistente = cart.find((item) => item.id === id);
-
-    if (produtoExistente) {
-      produtoExistente.quantidade += 1;
-    } else {
-      cart.push({
-        id: id,
-        nome: nome,
-        preco: preco,
-        imagem: imagem,
-        quantidade: 1
-      });
-    }
-
-    saveCart(cart);
-    updateCartCount();
-
-    alert(`${nome} foi adicionado ao carrinho!`);
-  });
-});
-
-// ============================
-// Renderizar Carrinho
-// ============================
 
 function renderCart() {
   const cartContainer = document.querySelector("#cart-items");
@@ -107,11 +64,7 @@ function renderCart() {
   cartTotalElement.textContent = `R$ ${total.toFixed(2)}`;
 }
 
-// ============================
-// Funções globais do carrinho
-// ============================
-
-function increaseItem(id) {
+window.increaseItem = function(id) {
   const cart = getCart();
   const item = cart.find((p) => p.id === id);
 
@@ -124,7 +77,7 @@ function increaseItem(id) {
   updateCartCount();
 }
 
-function decreaseItem(id) {
+window.decreaseItem = function(id) {
   const cart = getCart();
   const item = cart.find((p) => p.id === id);
 
@@ -142,7 +95,7 @@ function decreaseItem(id) {
   updateCartCount();
 }
 
-function removeItem(id) {
+window.removeItem = function(id) {
   const cart = getCart();
   const newCart = cart.filter((p) => p.id !== id);
 
@@ -151,23 +104,51 @@ function removeItem(id) {
   updateCartCount();
 }
 
-// ============================
-// Limpar carrinho
-// ============================
+document.addEventListener("DOMContentLoaded", () => {
 
-const btnClear = document.querySelector("#btn-clear");
+  const addButtons = document.querySelectorAll(".add-cart");
 
-if (btnClear) {
-  btnClear.addEventListener("click", () => {
-    localStorage.removeItem("cart");
-    renderCart();
-    updateCartCount();
+  addButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+
+      const id = button.dataset.id;
+      const nome = button.dataset.nome;
+      const preco = parseFloat(button.dataset.preco);
+      const imagem = button.dataset.imagem;
+
+      const cart = getCart();
+
+      const produtoExistente = cart.find((item) => item.id === id);
+
+      if (produtoExistente) {
+        produtoExistente.quantidade += 1;
+      } else {
+        cart.push({
+          id: id,
+          nome: nome,
+          preco: preco,
+          imagem: imagem,
+          quantidade: 1
+        });
+      }
+
+      saveCart(cart);
+      updateCartCount();
+
+      alert(`${nome} foi adicionado ao carrinho!`);
+    });
   });
-}
 
-// ============================
-// Inicialização
-// ============================
+  const btnClear = document.querySelector("#btn-clear");
 
-updateCartCount();
-renderCart();
+  if (btnClear) {
+    btnClear.addEventListener("click", () => {
+      localStorage.removeItem("cart");
+      renderCart();
+      updateCartCount();
+    });
+  }
+
+  updateCartCount();
+  renderCart();
+});
