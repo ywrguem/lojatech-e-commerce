@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LojaTech - Sua Loja Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <h1 class="logo">Loja<span>Tech</span></h1>
+
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero" aria-label="Seção de apresentação da loja">
+      <div class="container hero-content">
+        <h2>Bem-vindo à LojaTech</h2>
+        <p>Os melhores produtos tecnológicos com preços acessíveis e entrega rápida.</p>
+        <a class="btn-primary" href="#produtos">Ver Produtos</a>
+      </div>
+    </section>
+
+    <section id="produtos" class="products-section" aria-label="Lista de produtos">
+      <div class="container">
+        <h2 class="section-title">Produtos em Destaque</h2>
+
+        <div class="products-grid">
+
+          <article class="product-card">
+            <img 
+              src="images/produto1.jpg"
+              alt="Notebook prata moderno aberto"
+              class="product-image"
+            >
+
+            <div class="product-info">
+              <h3>Notebook Pro X</h3>
+              <p>Notebook ideal para estudos, trabalho e produtividade com ótimo desempenho.</p>
+              <p class="price">R$ 3.499,90</p>
+
+              <button class="btn-buy" type="button">
+                Comprar Agora
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img 
+              src="images/produto2.webp"
+              alt="Smartwatch moderno com pulseira preta"
+              class="product-image"
+            >
+
+            <div class="product-info">
+              <h3>Smartwatch Fit</h3>
+              <p>Controle sua saúde, passos e notificações com um design moderno e confortável.</p>
+              <p class="price">R$ 299,90</p>
+
+              <button class="btn-buy" type="button">
+                Comprar Agora
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img 
+              src="images/produto3.webp"
+              alt="Fone de ouvido bluetooth JBL preto com estojo de carregamento"
+              class="product-image"
+            >
+
+            <div class="product-info">
+              <h3>Fone Bluetooth JBL</h3>
+              <p>Fone sem fio com excelente qualidade sonora e bateria de longa duração.</p>
+              <p class="price">R$ 189,90</p>
+
+              <button class="btn-buy" type="button">
+                Comprar Agora
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact-section" aria-label="Área de contato">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <p class="contact-text">Tem alguma dúvida? Preencha o formulário abaixo e fale com a gente!</p>
+
+        <form class="contact-form">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 LojaTech - Todos os direitos reservados.</p>
+      <p>Email: contato@lojatech.com | Telefone: (65) 98103-8426</p>
+    </div>
+  </footer>
+
+</body>
+</html>
