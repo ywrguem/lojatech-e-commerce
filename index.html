@@ -11,48 +11,57 @@
 
   <header class="header">
     <div class="container header-content">
+
       <h1 class="logo">Loja<span>Tech</span></h1>
 
       <nav aria-label="Menu principal">
         <ul class="menu">
           <li><a class="active" href="index.html">Início</a></li>
           <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="carrinho.html">Carrinho <span id="cart-count" class="cart-count">0</span></a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" id="userLink">Login</a></li>
+          <li>
+            <a href="carrinho.html">
+              Carrinho <span id="cartCount" class="cart-count">0</span>
+            </a>
+          </li>
         </ul>
       </nav>
+
+      <button id="themeBtn" class="theme-btn" type="button">🌙 Tema</button>
+
     </div>
   </header>
 
   <main>
 
-    <section class="hero" aria-label="Apresentação da LojaTech">
+    <section class="hero" aria-label="Apresentação da loja">
       <div class="container hero-content">
-        <h2>Tecnologia de Verdade, Preço Justo</h2>
-        <p>Produtos modernos, atendimento rápido e entrega segura. Tudo em um só lugar.</p>
-        <a class="btn-primary" href="produtos.html">Explorar Produtos</a>
+        <h2>Bem-vindo à LojaTech</h2>
+        <p>Produtos modernos, qualidade garantida e entrega rápida.</p>
+        <a href="produtos.html" class="btn-primary">Explorar Produtos</a>
       </div>
     </section>
 
-    <section class="highlights" aria-label="Destaques da loja">
+    <section class="highlights" aria-label="Benefícios da loja">
       <div class="container">
-        <h2 class="section-title">Por que escolher a LojaTech?</h2>
+        <h2 class="section-title">Por que comprar conosco?</h2>
 
         <div class="highlight-grid">
 
           <article class="highlight-card">
             <h3>Entrega Rápida</h3>
-            <p>Receba seus produtos com segurança e rapidez.</p>
+            <p>Receba com segurança e rapidez em qualquer lugar.</p>
           </article>
 
           <article class="highlight-card">
             <h3>Qualidade Garantida</h3>
-            <p>Produtos selecionados com garantia e suporte.</p>
+            <p>Produtos selecionados e com garantia real.</p>
           </article>
 
           <article class="highlight-card">
-            <h3>Melhor Preço</h3>
-            <p>Ofertas exclusivas com preços competitivos.</p>
+            <h3>Suporte Profissional</h3>
+            <p>Atendimento completo antes e depois da compra.</p>
           </article>
 
         </div>
@@ -66,32 +75,32 @@
         <div class="products-grid">
 
           <article class="product-card">
-            <img src="images/produto1.jpg" alt="Notebook prata moderno aberto" class="product-image">
+            <img src="images/notebook.jpg" alt="Notebook moderno prateado" class="product-image">
             <div class="product-info">
               <h3>Notebook Pro X</h3>
-              <p>Alta performance para estudos e trabalho com design moderno.</p>
+              <p>Desempenho alto para trabalho e estudos.</p>
               <p class="price">R$ 3.499,90</p>
-              <a class="btn-buy" href="produtos.html">Ver Produto</a>
+              <a href="produtos.html" class="btn-buy">Ver Produto</a>
             </div>
           </article>
 
           <article class="product-card">
-            <img src="images/produto2.webp" alt="Smartwatch moderno com pulseira preta" class="product-image">
+            <img src="images/smartwatch.jpg" alt="Smartwatch moderno preto" class="product-image">
             <div class="product-info">
               <h3>Smartwatch Fit</h3>
-              <p>Monitoramento completo com estilo, conforto e bateria durável.</p>
+              <p>Controle saúde, passos e notificações.</p>
               <p class="price">R$ 299,90</p>
-              <a class="btn-buy" href="produtos.html">Ver Produto</a>
+              <a href="produtos.html" class="btn-buy">Ver Produto</a>
             </div>
           </article>
 
           <article class="product-card">
-            <img src="images/produto3.webp" alt="Fone bluetooth JBL preto com estojo de carregamento" class="product-image">
+            <img src="images/fone.jpg" alt="Fone bluetooth com estojo" class="product-image">
             <div class="product-info">
               <h3>Fone Bluetooth JBL</h3>
-              <p>Som limpo, potente e sem fios com excelente autonomia.</p>
+              <p>Som potente com bateria duradoura.</p>
               <p class="price">R$ 189,90</p>
-              <a class="btn-buy" href="produtos.html">Ver Produto</a>
+              <a href="produtos.html" class="btn-buy">Ver Produto</a>
             </div>
           </article>
 
@@ -105,9 +114,10 @@
     <div class="container footer-content">
       <p>© 2026 LojaTech - Todos os direitos reservados.</p>
       <p>Email: contato@lojatech.com | Telefone: (65) 98103-8426</p>
+      <p id="dateTime">Carregando data e hora...</p>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -11,16 +11,25 @@
 
   <header class="header">
     <div class="container header-content">
+
       <h1 class="logo">Loja<span>Tech</span></h1>
 
       <nav aria-label="Menu principal">
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
           <li><a href="produtos.html">Produtos</a></li>
-          <li><a class="active" href="carrinho.html">Carrinho <span id="cart-count" class="cart-count">0</span></a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" id="userLink">Login</a></li>
+          <li>
+            <a class="active" href="carrinho.html">
+              Carrinho <span id="cartCount" class="cart-count">0</span>
+            </a>
+          </li>
         </ul>
       </nav>
+
+      <button id="themeBtn" class="theme-btn" type="button">🌙 Tema</button>
+
     </div>
   </header>
 
@@ -30,12 +39,12 @@
       <div class="container">
         <h2 class="section-title">Seu Carrinho</h2>
 
-        <div id="cart-items" class="cart-items"></div>
+        <div id="cartItems" class="cart-items"></div>
 
         <div class="cart-summary">
-          <p>Total: <span id="cart-total">R$ 0,00</span></p>
+          <p>Total: <span id="cartTotal">R$ 0,00</span></p>
 
-          <button id="btn-clear" class="btn-primary" type="button">
+          <button id="clearCartBtn" class="btn-primary" type="button">
             Limpar Carrinho
           </button>
         </div>
@@ -49,9 +58,10 @@
     <div class="container footer-content">
       <p>© 2026 LojaTech - Todos os direitos reservados.</p>
       <p>Email: contato@lojatech.com | Telefone: (65) 98103-8426</p>
+      <p id="dateTime">Carregando data e hora...</p>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

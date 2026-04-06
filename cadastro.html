@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LojaTech - Login</title>
+  <title>LojaTech - Cadastro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,7 +19,7 @@
           <li><a href="index.html">Início</a></li>
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a class="active" href="login.html" id="userLink">Login</a></li>
+          <li><a class="active" href="cadastro.html" id="userLink">Cadastro</a></li>
           <li>
             <a href="carrinho.html">
               Carrinho <span id="cartCount" class="cart-count">0</span>
@@ -35,27 +35,30 @@
 
   <main>
 
-    <section class="form-section" aria-label="Área de login">
+    <section class="form-section" aria-label="Cadastro de usuário">
       <div class="container">
-        <h2 class="section-title">Login</h2>
+        <h2 class="section-title">Criar Conta</h2>
 
-        <form id="loginForm" class="form-box">
+        <form id="registerForm" class="form-box">
 
-          <label for="loginEmail">E-mail:</label>
-          <input type="email" id="loginEmail" placeholder="Digite seu e-mail" required>
+          <label for="registerName">Nome:</label>
+          <input type="text" id="registerName" placeholder="Digite seu nome" required>
 
-          <label for="loginPassword">Senha:</label>
-          <input type="password" id="loginPassword" placeholder="Digite sua senha" required>
+          <label for="registerEmail">E-mail:</label>
+          <input type="email" id="registerEmail" placeholder="Digite seu e-mail" required>
 
-          <button class="btn-primary" type="submit">Entrar</button>
+          <label for="registerPassword">Senha:</label>
+          <input type="password" id="registerPassword" placeholder="Crie sua senha" required>
+
+          <button class="btn-primary" type="submit">Cadastrar</button>
 
           <p class="form-message">
-            Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a>
+            Já tem conta? <a href="login.html">Faça login</a>
           </p>
 
         </form>
 
-        <p id="loginMsg" class="form-message"></p>
+        <p id="registerMsg" class="form-message"></p>
 
       </div>
     </section>

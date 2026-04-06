@@ -11,16 +11,25 @@
 
   <header class="header">
     <div class="container header-content">
+
       <h1 class="logo">Loja<span>Tech</span></h1>
 
       <nav aria-label="Menu principal">
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
           <li><a class="active" href="produtos.html">Produtos</a></li>
-          <li><a href="carrinho.html">Carrinho <span id="cart-count" class="cart-count">0</span></a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" id="userLink">Login</a></li>
+          <li>
+            <a href="carrinho.html">
+              Carrinho <span id="cartCount" class="cart-count">0</span>
+            </a>
+          </li>
         </ul>
       </nav>
+
+      <button id="themeBtn" class="theme-btn" type="button">🌙 Tema</button>
+
     </div>
   </header>
 
@@ -30,60 +39,120 @@
       <div class="container">
         <h2 class="section-title">Nossos Produtos</h2>
 
+        <div class="search-box">
+          <input id="searchInput" type="text" placeholder="Pesquisar produto..." aria-label="Pesquisar produto">
+          <button id="searchBtn" class="btn-primary" type="button">Pesquisar</button>
+          <button id="resetBtn" class="btn-primary" type="button">Limpar</button>
+        </div>
+
         <div class="products-grid">
 
-          <article class="product-card">
-            <img src="images/produto1.jpg" alt="Notebook prata moderno aberto" class="product-image">
+          <article class="product-card product-item" data-name="Notebook Pro X">
+            <img src="images/notebook.jpg" alt="Notebook moderno prateado" class="product-image">
+
             <div class="product-info">
               <h3>Notebook Pro X</h3>
-              <p>Notebook ideal para produtividade, estudos e trabalho.</p>
+              <p>Alta performance para produtividade e estudos.</p>
               <p class="price">R$ 3.499,90</p>
 
               <button class="btn-buy add-cart"
                 data-id="1"
-                data-nome="Notebook Pro X"
-                data-preco="3499.90"
-                data-imagem="images/produto1.jpg">
+                data-name="Notebook Pro X"
+                data-price="3499.90"
+                data-image="images/notebook.jpg">
                 Adicionar ao Carrinho
               </button>
+
+              <button class="btn-details" type="button">Ver detalhes</button>
+
+              <div class="details hidden">
+                <p>✔ Processador i7</p>
+                <p>✔ 16GB RAM</p>
+                <p>✔ SSD 512GB</p>
+              </div>
             </div>
           </article>
 
-          <article class="product-card">
-            <img src="images/produto2.webp" alt="Smartwatch moderno com pulseira preta" class="product-image">
+          <article class="product-card product-item" data-name="Smartwatch Fit">
+            <img src="images/smartwatch.jpg" alt="Smartwatch moderno preto" class="product-image">
+
             <div class="product-info">
               <h3>Smartwatch Fit</h3>
-              <p>Controle sua saúde, notificações e passos com estilo.</p>
+              <p>Monitore saúde, passos e notificações.</p>
               <p class="price">R$ 299,90</p>
 
               <button class="btn-buy add-cart"
                 data-id="2"
-                data-nome="Smartwatch Fit"
-                data-preco="299.90"
-                data-imagem="images/produto2.webp">
+                data-name="Smartwatch Fit"
+                data-price="299.90"
+                data-image="images/smartwatch.jpg">
                 Adicionar ao Carrinho
               </button>
+
+              <button class="btn-details" type="button">Ver detalhes</button>
+
+              <div class="details hidden">
+                <p>✔ Monitor cardíaco</p>
+                <p>✔ Controle de sono</p>
+                <p>✔ Resistência à água</p>
+              </div>
             </div>
           </article>
 
-          <article class="product-card">
-            <img src="images/produto3.webp" alt="Fone bluetooth JBL preto com estojo de carregamento" class="product-image">
+          <article class="product-card product-item" data-name="Fone Bluetooth JBL">
+            <img src="images/fone.jpg" alt="Fone bluetooth com estojo" class="product-image">
+
             <div class="product-info">
               <h3>Fone Bluetooth JBL</h3>
-              <p>Som potente, sem fios e bateria de longa duração.</p>
+              <p>Som potente e bateria duradoura.</p>
               <p class="price">R$ 189,90</p>
 
               <button class="btn-buy add-cart"
                 data-id="3"
-                data-nome="Fone Bluetooth JBL"
-                data-preco="189.90"
-                data-imagem="images/produto3.webp">
+                data-name="Fone Bluetooth JBL"
+                data-price="189.90"
+                data-image="images/fone.jpg">
                 Adicionar ao Carrinho
               </button>
+
+              <button class="btn-details" type="button">Ver detalhes</button>
+
+              <div class="details hidden">
+                <p>✔ Bluetooth 5.0</p>
+                <p>✔ Microfone embutido</p>
+                <p>✔ Estojo carregador</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-item" data-name="Teclado Mecânico RGB">
+            <img src="images/teclado.jpg" alt="Teclado mecânico gamer RGB" class="product-image">
+
+            <div class="product-info">
+              <h3>Teclado Mecânico RGB</h3>
+              <p>Teclado gamer profissional com RGB.</p>
+              <p class="price">R$ 249,90</p>
+
+              <button class="btn-buy add-cart"
+                data-id="4"
+                data-name="Teclado Mecânico RGB"
+                data-price="249.90"
+                data-image="images/teclado.jpg">
+                Adicionar ao Carrinho
+              </button>
+
+              <button class="btn-details" type="button">Ver detalhes</button>
+
+              <div class="details hidden">
+                <p>✔ Switch mecânico</p>
+                <p>✔ RGB personalizável</p>
+                <p>✔ Teclas resistentes</p>
+              </div>
             </div>
           </article>
 
         </div>
+
       </div>
     </section>
 
@@ -93,9 +162,10 @@
     <div class="container footer-content">
       <p>© 2026 LojaTech - Todos os direitos reservados.</p>
       <p>Email: contato@lojatech.com | Telefone: (65) 98103-8426</p>
+      <p id="dateTime">Carregando data e hora...</p>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
